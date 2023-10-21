@@ -1,24 +1,24 @@
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
+import './sidesbar.css';
+import { FaHome, FaBell, FaUser, FaUserFriends } from 'react-icons/fa';
 
-
-const Sidebar = () => {
-
+function Sidebar({ menuOpen }) {
   return (
-    <div className="Sidebar">
-      <ul>
-       
-        <li>
-          
-          <h1>holaaaaa</h1>
-        </li>
-        <hr></hr>
-        <li id='filter'>
-          <button className="btn">Filter Products</button>
-        </li>
-      </ul>
+    <div className={`sidebar ${menuOpen ? '' : 'hidden'}`}>
+     <a href="#">
+        <FaHome /> Inicio
+      </a>
+      <a href="#">
+        <FaBell /> Notificaciones
+      </a>
+      <a href="#">
+        <FaUserFriends /> Siguiendo
+      </a>
+      <a href="#">
+        <FaUser /> Perfil
+      </a>
     </div>
   );
-};
+}
 
 export default Sidebar;
